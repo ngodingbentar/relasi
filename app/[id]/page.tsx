@@ -1,23 +1,22 @@
-import { Suspense } from "react"
-import UserDetail from "./User.compoent"
+// import { Suspense } from "react";
+import UserDetail from "./User.compoent";
 
-interface IProps {
-  params: {
-    id: string
-  }
-}
-const UserPage = async ({ params }: IProps) => {
-  console.log("params", params.id)
+// interface PageProps {
+//   params: { id: string };
+// }
+
+const UserPage = async () => {
+  // console.log("params", params.id);
   const data = {
     name: "zhangsan",
     age: 20,
-    username: params.id
-  }
+    username: "dewaqintoro",
+  };
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <div>
       <UserDetail data={data} />
-    </Suspense>
-  )
-}
+    </div>
+  );
+};
 
-export default UserPage
+export default UserPage;
